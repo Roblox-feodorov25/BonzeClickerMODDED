@@ -1,0 +1,292 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 35px rgba(209, 10, 10, 0.7);
+    width: 300px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-info {
+    text-align: left;
+    text-shadow: #000000;
+}
+
+.level {
+    font-size: 12px;
+    color: #888;
+}
+
+.income {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.rewards {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.reward {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.reward-title {
+    font-size: 12px;
+    margin-bottom: 5px;
+}
+
+.reward-timer {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.game-area {
+    position: relative;
+    display: inline-block;
+    margin: 20px 0;
+}
+
+#hamster {
+    width: 120px; /* уменьшение размера хомяка */
+    cursor: pointer;
+    color: #b62323;
+    transition:0.3s;
+}
+
+#hamster:active {
+    transform: scale(0.8);
+}
+
+.lox:active {
+    transform: scale(0.8);
+}
+
+.lox:pointer {
+    transform: scale(0.8);
+}
+
+.score-board {
+    font-size: 25px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-top: -40px; /* перемещение между хомяком и верхней панелью */
+}
+
+.lox2 {
+    background-color: #80362d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 25px rgba(199, 18, 18, 0.456);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    transition: 0.3s;
+}
+
+.coin-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 5px;
+}
+
+.reward2 {
+    background-color: rgb(105, 28, 177);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 50px rgba(105, 28, 177, 0.7);
+    width: 30%;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.reward-title3 {
+    color: #b62323;
+    font-size: 11px;
+    margin-bottom: 3px;
+}
+
+.pontext {
+    color: rgb(198, 18, 18);
+  }
+
+.reward-title2 {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.reward-timer2 {
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.energy-boost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.energy {
+    font-size: 14px;
+    color: #555;
+    margin-right: 10px;
+}
+
+.boost-button {
+    background-color: #ff5722;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.lox {
+    background-color: #81d823;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    transition: 0.3s;
+}
+
+.boost-button:hover {
+    background-color: #e64a19;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-around;
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.nav-button {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s ease;
+}
+
+.nav-button:hover {
+    color: #ff5722;
+}
+
+#floating-score {
+    position: absolute;
+    pointer-events: none;
+    color: rgb(208, 17, 17);
+    font-size: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    animation: floatUp 1s ease-out forwards;
+}
+
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333333;
+    transition: opacity 0.75s, visibility 0.75s;
+  }
+  
+  .loader--hidden {
+    opacity: 0;
+    visibility: hidden;
+  }
+  
+  .loader::after {
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #6d0095;
+    border-radius: 50%;
+    animation: loading 1s ease infinite;
+  }
+  
+  @keyframes loading {
+    from {
+      transform: rotate(0turn);
+    }
+    to {
+      transform: rotate(1turn);
+    }
+  }
+  
+
+
+
+@keyframes floatUp {
+    0% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+}
